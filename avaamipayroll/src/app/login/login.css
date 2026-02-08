@@ -1,5 +1,4 @@
 :host {
-  /* Professional Slate & Indigo Palette */
   --primary-color: #4f46e5;
   --primary-hover: #4338ca;
   --bg-surface: #ffffff;
@@ -8,7 +7,6 @@
   --text-muted: #64748b;
   --error-color: #ef4444;
   --border-color: #e2e8f0;
-  
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
@@ -18,7 +16,6 @@
   align-items: center;
   justify-content: center;
   background-color: var(--bg-app);
-  /* Subtle geometric pattern background */
   background-image: radial-gradient(#e2e8f0 0.5px, transparent 0.5px);
   background-size: 24px 24px;
   padding: 1.5rem;
@@ -55,7 +52,7 @@
 .auth-form {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem; /* Consistent spacing between fields */
+  gap: 1.25rem;
 }
 
 .form-group {
@@ -77,9 +74,8 @@ input {
   border-radius: 8px;
   font-size: 0.95rem;
   color: var(--text-main);
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.2s ease;
   box-sizing: border-box;
-  background-color: #fff;
 }
 
 input:focus {
@@ -88,19 +84,13 @@ input:focus {
   box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
 }
 
-input::placeholder {
-  color: #cbd5e1;
-}
-
 input.error {
   border-color: var(--error-color);
-  background-color: #fffafb;
 }
 
 .error-text {
   color: var(--error-color);
   font-size: 0.75rem;
-  font-weight: 500;
   margin-top: 0.4rem;
 }
 
@@ -114,17 +104,12 @@ input.error {
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.1s, background 0.2s;
-  margin-top: 0.5rem;
+  transition: all 0.2s;
 }
 
 .btn-signup:hover:not(:disabled) {
   background: var(--primary-hover);
   transform: translateY(-1px);
-}
-
-.btn-signup:active:not(:disabled) {
-  transform: translateY(0);
 }
 
 .btn-signup:disabled {
@@ -143,8 +128,4 @@ input.error {
   color: var(--primary-color);
   text-decoration: none;
   font-weight: 600;
-}
-
-.auth-footer a:hover {
-  text-decoration: underline;
 }
